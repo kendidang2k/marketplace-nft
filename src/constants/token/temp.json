@@ -1,0 +1,35 @@
+{
+  "name": "LUCKY",
+  "timestamp": "2021-03-09T15:41:29.665Z",
+  "version": {
+    "major": 1,
+    "minor": 3,
+    "patch": 1
+  },
+  "tags": {},
+  "logoURI": "/images/coinslist/temp.png",
+  "tokens": [
+    {
+      "name": "WBNB Token",
+      "symbol": "WBNB",
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "chainId": 56,
+      "decimals": 18
+    },
+    {
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xcec0b363b3ac190c0e5cdfdb448521476f60b162",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "/images/coinslist/busd.png"
+    },
+    {
+      "name": "WBNB Token",
+      "symbol": "WBNB",
+      "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+      "chainId": 97,
+      "decimals": 18
+    }
+  ]
+}
