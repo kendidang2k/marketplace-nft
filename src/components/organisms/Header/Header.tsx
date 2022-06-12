@@ -1,11 +1,12 @@
-import React from 'react'
+import { Grid } from "@mui/material";
+import { Logo } from "components/atoms/Logo/Logo";
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header: React.FC = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <Grid>
+      <Logo isNameVisible={true}/>
+    </Grid>
+  );
+};
 
-export default Header
+export default Header;
