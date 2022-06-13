@@ -1,0 +1,14 @@
+@import '../../../styles/abstracts/variables.scss';
+
+.navbar{
+    padding: 20px;
+    .nav__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        color: $color-gray;
+        border-radius: 10px;
+        background-color: $color-gray-2;
+    }
+}
