@@ -1,6 +1,13 @@
-import create from "zustand";
+import create, { StateCreator } from "zustand";
 
-const useNavbarActive = create((set) => ({
-    navStatus: true,
-    changeNavStatus: (navStatus) => set((navStatus: boolean) => ({ navStatus: !navStatus })),
+interface navbarState {
+  navStatus: boolean;
+  changeNavStatus: (navStatus: boolean) => void;
+}
+
+const useNavbarActive = create<navbarState>((set) => ({
+  navStatus: false,
+  changeNavStatus: (navStatus) => set({ navStatus }),
 }));
+
+export default useNavbarActive;
