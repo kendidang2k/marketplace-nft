@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import { AiFillHome, AiFillCodeSandboxCircle } from "react-icons/ai";
 import { MdInventory } from "react-icons/md";
+import useNavbarActive from "../../../zustand/useNavbarActive";
+import useNavbar from "../../../zustand/useNavbar";
 
 interface NavbarProps {}
 
@@ -34,18 +36,23 @@ const navItemList: Array<navItem> = [
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({}) => {
+  const { navStatus, changeNavStatus } = useNavbarActive();
+
   return (
     <Box
+      className={navStatus ? "nav__active" : "nav__inactive"}
       sx={{
         position: { xs: "fixed", md: "relative" },
+        left: 0,
         width: "100%",
         height: { xs: "100vh", md: "100vh" },
         backgroundColor: "#0000000",
+        transition: "0.3s ease-in-out",
       }}
     >
       <Grid
         onClick={() => {
-          console.log("asdasdasdasd");
+          changeNavStatus(!navStatus);
         }}
         sx={{
           width: "100%",
