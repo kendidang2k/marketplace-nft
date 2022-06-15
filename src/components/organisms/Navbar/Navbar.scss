@@ -14,5 +14,8 @@
 }
 
 .nav__inactive{
- left: -80%!important;   
+ left: -80%!important;
+ @media (min-width: 900px) {
+    left: 0!important;
+ }
 }

@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { ButtonBase, Grid, Typography } from "@mui/material";
 import { Logo } from "components/atoms/Logo/Logo";
 import { NavButton } from "components/atoms/NavButton/NavButton";
 import { BsHandbagFill } from "react-icons/bs";
@@ -31,6 +31,21 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
         </Typography>
         {title}
       </Typography>
+      <ButtonBase
+        sx={{
+          position: "absolute",
+          right: "20px",
+          top: "24%",
+          backgroundColor: "#004bfb",
+          border: "none",
+          padding: "7px 15px",
+          color: "#fff",
+          fontSize: "15px",
+          borderRadius: '5px'
+        }}
+      >
+        Đăng nhập
+      </ButtonBase>
     </Grid>
   );
 };
