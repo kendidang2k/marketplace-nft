@@ -8,7 +8,7 @@ interface selectedClassState {
 }
 
 const useSelectedClass = create<selectedClassState>((set) => ({
-  addToClassList: (navStatus) => set({ navStatus }),
+  addToClassList: (Class: object) => set({ navStatus }),
 }));
 
 export default useSelectedClass;
