@@ -32,8 +32,6 @@ export const Home: React.FC = ({}) => {
           }}
         >
           <Header title={"Marketplace"} />
-          Hello world !!!
-          <p>Your address is {account}</p>
           <Market />
         </Grid>
         <GlobalModal />

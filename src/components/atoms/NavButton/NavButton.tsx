@@ -11,6 +11,7 @@ export const NavButton: React.FC<NavButtonProps> = ({}) => {
   return (
     <Box
       sx={{
+        display: { xs: "block", md: "none" },
         position: "absolute",
         left: "20px",
         top: "20%",
