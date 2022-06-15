@@ -2,16 +2,12 @@ import { Grid, Typography } from "@mui/material";
 import ConnectWalletModal from "components/organisms/ConnectWalletModal/ConnectWalletModal";
 import GlobalModal from "components/organisms/GlobalModal/GlobalModal";
 import { Header } from "components/organisms/Header/Header";
+import { Market } from "components/organisms/Market/Market";
 import { Navbar } from "components/organisms/Navbar/Navbar";
 import useAccount from "hooks/useAccount";
 import React, { useEffect } from "react";
-import useNavbarActive from "../../zustand/useNavbarActive";
 
 export const Home: React.FC = ({}) => {
-  // const isNavActive = useNavbarActive((state) => state.navStatus);
-  // const setIsNavActive = useNavbarActive((state) => state.changeNavStatus);
-
-  // console.log("isNavActive", isNavActive);
 
   useEffect(() => {
     GlobalModal.show(<ConnectWalletModal onClose={GlobalModal.hide} />);
@@ -20,7 +16,7 @@ export const Home: React.FC = ({}) => {
 
   return (
     <Grid>
-      <Grid container sx={{ backgroundColor: "#13161b" }}>
+      <Grid container sx={{ backgroundColor: "#13161b", width: '100%', overflowX: 'hidden' }}>
         <Grid item xs={12} md={4} sx={{ height: "100%", zIndex: "10" }}>
           <Navbar />
         </Grid>
@@ -38,6 +34,7 @@ export const Home: React.FC = ({}) => {
           <Header title={"Marketplace"} />
           Hello world !!!
           <p>Your address is {account}</p>
+          <Market />
         </Grid>
         <GlobalModal />
       </Grid>
