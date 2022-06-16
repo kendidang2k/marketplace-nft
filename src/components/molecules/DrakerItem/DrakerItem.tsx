@@ -23,7 +23,7 @@ export const DrakerItem: React.FC<DrakerItemProps> = ({
   return (
     <Grid
       sx={{
-        position: 'relative',
+        position: "relative",
         backgroundColor: "#1c1f25",
         border: "1px solid #282c34",
         width: { xs: "220px", md: "170px" },
@@ -70,7 +70,18 @@ export const DrakerItem: React.FC<DrakerItemProps> = ({
         alt="Draker image"
         sx={{ width: "100%" }}
       />
-      <Typography component={"p"} sx={{position: 'absolute', bottom: '5px', left:'20px', color: '#fff', fontSize: '14px'}}>{price}$</Typography>
+      <Typography
+        component={"p"}
+        sx={{
+          position: "absolute",
+          bottom: "5px",
+          left: "20px",
+          color: "#fff",
+          fontSize: "14px",
+        }}
+      >
+        {price}$
+      </Typography>
     </Grid>
   );
 };

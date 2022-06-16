@@ -7,9 +7,9 @@ interface selectedClassState {
   addToClassList: (Class: object) => void;
 }
 
-const useSelectedClass = create<selectedClassState>((set) => ({
+const useSelectedClass = create < selectedClassState > ((set) => ({
   classList: [],
-  addToClassList: (classList) => set((state)=>{
+  addToClassList: (classList) => set((state) => {
     ...state,
     classList
   }),

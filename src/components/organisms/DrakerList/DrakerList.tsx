@@ -46,7 +46,16 @@ export const DrakerList: React.FC<DrakerListProps> = ({}) => {
   const [typeColor, setTypeColor] = useState("");
 
   return (
-    <Grid sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", height: 'calc(100vh - 60px - 60px)', overflow: 'scroll' }}>
+    <Grid
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+
+        height: "calc(100vh - 60px - 60px)",
+        overflow: "scroll",
+      }}
+    >
       {drakerListData &&
         drakerListData.map((item, index) => {
           return (

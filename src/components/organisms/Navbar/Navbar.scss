@@ -15,7 +15,11 @@
 
 .nav__inactive{
  left: -80%!important;
+ visibility: hidden;
+ opacity: 0;
  @media (min-width: 900px) {
     left: 0!important;
+    visibility: visible;
+    opacity: 1;
  }
 }
