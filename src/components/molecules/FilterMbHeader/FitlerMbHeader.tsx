@@ -5,8 +5,20 @@ interface FitlerMbHeaderProps {}
 
 export const FitlerMbHeader: React.FC<FitlerMbHeaderProps> = ({}) => {
   return (
-    <Grid sx={{ displayL: { xs: "block", mdL: "none" } }}>
-      <ButtonBase>Filter</ButtonBase>
+    <Grid sx={{ display: { xs: "flex", md: "none" }, justifyContent: 'flex-end' }}>
+      <ButtonBase
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "10px 25px",
+          backgroundColor: '#c99681',
+          fontWeight:'bold',
+          borderRadius: '5px'
+        }}
+      >
+        Filter
+      </ButtonBase>
     </Grid>
   );
 };
