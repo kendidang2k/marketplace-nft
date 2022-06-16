@@ -7,7 +7,7 @@ interface MarketProps {}
 
 export const Market: React.FC<MarketProps> = ({}) => {
   return (
-    <Grid>
+    <Grid sx={{ height: "100%" }}>
       <Grid container>
         <Grid item xs={12} md={4}>
           <FilterBox />

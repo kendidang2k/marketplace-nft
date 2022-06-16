@@ -1,0 +1,10 @@
+.filter__box__inactive {
+    top: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    @media (min-width: 900px) {
+        top: 0 !important;
+        opacity: 1;
+        visibility: visible;
+    }
+}
