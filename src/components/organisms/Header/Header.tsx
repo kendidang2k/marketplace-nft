@@ -1,12 +1,14 @@
 import { ButtonBase, Grid, Typography } from "@mui/material";
 import { Logo } from "components/atoms/Logo/Logo";
 import { NavButton } from "components/atoms/NavButton/NavButton";
+import useAccount from "hooks/useAccount";
 import { BsHandbagFill } from "react-icons/bs";
 interface HeaderProps {
   title: String;
 }
 
 export const Header: React.FC<HeaderProps> = ({ title }) => {
+  const account = useAccount();
   return (
     <Grid
       sx={{
@@ -31,21 +33,23 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
         </Typography>
         {title}
       </Typography>
-      <ButtonBase
-        sx={{
-          position: "absolute",
-          right: "20px",
-          top: "24%",
-          backgroundColor: "#004bfb",
-          border: "none",
-          padding: "7px 15px",
-          color: "#fff",
-          fontSize: "15px",
-          borderRadius: '5px'
-        }}
-      >
-        Đăng nhập
-      </ButtonBase>
+      {account || (
+        <ButtonBase
+          sx={{
+            position: "absolute",
+            right: "20px",
+            top: "24%",
+            backgroundColor: "#004bfb",
+            border: "none",
+            padding: "7px 15px",
+            color: "#fff",
+            fontSize: "15px",
+            borderRadius: "5px",
+          }}
+        >
+          Đăng nhập
+        </ButtonBase>
+      )}
     </Grid>
   );
 };
