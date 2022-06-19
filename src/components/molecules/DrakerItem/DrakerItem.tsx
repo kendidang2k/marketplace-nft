@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import draker from "config/draker";
 import React from "react";
 import fire from "../../../assets/images/fire.svg";
 
@@ -37,7 +38,7 @@ export const DrakerItem: React.FC<DrakerItemProps> = ({
       <Typography
         component={"p"}
         sx={{
-          backgroundColor: `#900000`,
+          backgroundColor: draker.typeColor[type],
           width: "fit-content",
           padding: "1px 10px",
           borderRadius: "5px",

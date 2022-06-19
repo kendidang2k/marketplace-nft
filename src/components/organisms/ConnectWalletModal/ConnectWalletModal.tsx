@@ -12,6 +12,7 @@ const ConnectWalletModal = ({ onClose }) => {
   const handleLogin = (connectorId: ConnectorNames) => {
     login(connectorId);
     window.localStorage.setItem(connectorLocalStorageKey, connectorId);
+
     onClose();
   };
 

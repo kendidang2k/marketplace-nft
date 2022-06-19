@@ -1,12 +1,14 @@
 import { ButtonBase, Grid, Typography } from "@mui/material";
 import { Logo } from "components/atoms/Logo/Logo";
 import { NavButton } from "components/atoms/NavButton/NavButton";
+import useAccount from "hooks/useAccount";
 import { BsHandbagFill } from "react-icons/bs";
 interface HeaderProps {
   title: String;
 }
 
 export const Header: React.FC<HeaderProps> = ({ title }) => {
+  const account = useAccount();
   return (
     <Grid
       sx={{
