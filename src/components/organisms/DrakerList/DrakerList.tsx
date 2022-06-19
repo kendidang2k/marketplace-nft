@@ -40,6 +40,34 @@ const drakerListData: Array<DrakerItemProps> = [
     price: 13,
     type: "fire",
   },
+  {
+    id: 12312,
+    drakerName: "asdasdasd",
+    imageURL: kyLan,
+    price: 23,
+    type: "earth",
+  },
+  {
+    id: 12312,
+    drakerName: "asdasdasd",
+    imageURL: rongVang,
+    price: 13,
+    type: "fire",
+  },
+  {
+    id: 12312,
+    drakerName: "asdasdasd",
+    imageURL: kyLan,
+    price: 23,
+    type: "earth",
+  },
+  {
+    id: 12312,
+    drakerName: "asdasdasd",
+    imageURL: rongVang,
+    price: 13,
+    type: "fire",
+  },
 ];
 
 export const DrakerList: React.FC<DrakerListProps> = ({}) => {
@@ -50,10 +78,14 @@ export const DrakerList: React.FC<DrakerListProps> = ({}) => {
       sx={{
         display: "flex",
         flexWrap: "wrap",
+        alignItems:'flex-start',
+        alignContent: 'flex-start',
         justifyContent: "center",
-
-        height: "calc(100vh - 60px - 60px)",
-        overflow: "scroll",
+        height: {
+          xs: "calc(100vh - 60px - 60px)",
+          md: "calc(100vh - 60px - 100px)",
+        },
+        overflowY: "scroll",
       }}
     >
       {drakerListData &&

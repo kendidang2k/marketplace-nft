@@ -15,15 +15,20 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
         position: "relative",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        height: "60px",
+        justifyContent: { xs: "center", md: "space-between" },
+        height: { xs: "60px", md: "100px" },
         borderBottom: "1px solid #282c34",
+        padding: "0 20px",
       }}
     >
       <NavButton />
       <Typography
         component={"p"}
-        sx={{ color: "#c99681", fontSize: "27px", fontWeight: "bold" }}
+        sx={{
+          color: "#c99681",
+          fontSize: { xs: "27px", md: "37px" },
+          fontWeight: "bold",
+        }}
       >
         <Typography
           component={"span"}
@@ -33,23 +38,21 @@ export const Header: React.FC<HeaderProps> = ({ title }) => {
         </Typography>
         {title}
       </Typography>
-      {account || (
-        <ButtonBase
-          sx={{
-            position: "absolute",
-            right: "20px",
-            top: "24%",
-            backgroundColor: "#004bfb",
-            border: "none",
-            padding: "7px 15px",
-            color: "#fff",
-            fontSize: "15px",
-            borderRadius: "5px",
-          }}
-        >
-          Đăng nhập
-        </ButtonBase>
-      )}
+      <ButtonBase
+        sx={{
+          position: "absolute",
+          right: "20px",
+          top: "24%",
+          backgroundColor: "#004bfb",
+          border: "none",
+          padding: {xs:"7px 15px", md:"10px 15px"},
+          color: "#fff",
+          fontSize: "15px",
+          borderRadius: "5px",
+        }}
+      >
+        Đăng nhập
+      </ButtonBase>
     </Grid>
   );
 };
