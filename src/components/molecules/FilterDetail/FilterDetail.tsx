@@ -25,6 +25,7 @@ export const FilterDetail: React.FC<FilterDetailProps> = ({}) => {
         zIndex: "10",
         padding: "10px 15px 0 0",
         transition: ".5s ease-in-out",
+        borderRight: "1px solid #282c34" 
       }}
     >
       <Grid

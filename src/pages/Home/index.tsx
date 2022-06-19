@@ -14,7 +14,7 @@ export const Home: React.FC = ({}) => {
   const account = useAccount();
 
   return (
-    <Grid>
+    <Grid sx={{height: '100vh', overflow: 'hidden'}}>
       <Grid
         container
         sx={{ backgroundColor: "#13161b", width: "100%", overflowX: "hidden" }}
@@ -27,7 +27,6 @@ export const Home: React.FC = ({}) => {
           xs={12}
           md={8}
           sx={{
-            margin: "auto",
             height: "auto",
             zIndex: "5",
           }}

@@ -67,7 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
       <Grid
         className="navbar"
         sx={{
-          width: "80%",
+          width: { xs: "80%", md: "100%" },
           height: "100%",
           backgroundColor: "#13161b",
           borderRight: "0.2px solid #282c34",
